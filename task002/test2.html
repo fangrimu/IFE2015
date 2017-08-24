@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="drag" draggable="true" style="width:100px;height:50px;background-color:red;">
+test
+</div>
+<script type="text/javascript">
+	var drag = document.getElementById('drag');
+drag.onselectstart = function(){return false;};
+// FF下拖拽时，默认不会生成一个被拖拽元素的阴影并跟随鼠标移动
+// 需通过e.dataTransfer.setData来启动该效果
+drag.ondragstart = function(e){
+    e.dataTransfer.setData('text', e.target.innerHTML);
+};
+</script>
+</body>
+</html>
