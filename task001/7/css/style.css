@@ -1,0 +1,385 @@
+*{
+	margin: 0;
+	padding: 0;
+	font:14px '宋体' ;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	background-color: #e2e2e2;
+	min-width: 1200px;
+}
+ul li{
+	list-style-type: none;/*去掉li前面的点*/
+
+}
+
+/*header部分样式*/
+header{
+	width: 100%;
+	height: 80px;
+	color: white;
+	background-color: #47456D;
+	font: 14px '宋体';
+	position: relative;
+	
+}
+div.nav_wrap{
+	width: 980px;
+	height: 80px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.nav_wrap img{
+	position: absolute;
+	bottom: 5px;
+}
+.nav_wrap ul{
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+}
+.nav_wrap ul li{
+	float: left;/*li横向排列*/
+	margin-left: 28px;
+}
+
+header .github_icon{
+	position: absolute;
+	right: 10px;
+	bottom: 0;
+}
+
+/******************************index页面主体部分样式*********************************/
+
+/*主体banner部分*/
+.banner {
+	width: 100%;
+	height: 460px;
+	position: relative;
+}
+
+.banner img{
+	width: inherit;
+	height: inherit;
+}
+.text_intro{
+	width: 360px;
+	color: white;
+	position: absolute;
+	right: 110px;
+	bottom: 0;
+	padding: 10px 10px 30px 10px;
+	/*background-color: rgba(255,255,255,0);*/
+	background-image: linear-gradient(to bottom,
+		rgba(255,255,255,0.7) 0%,
+		rgba(255,255,255,0.5) 75%,
+		rgba(255,255,255,0) 100%);
+
+	background-image: -webkit-linear-gradient(to bottom,
+		rgba(255,255,255,0.7) 0%,
+		rgba(255,255,255,0.5) 75%,
+		rgba(255,255,255,0) 100%);
+
+}
+.text_intro h4{
+	font-size: 14px;
+	margin-bottom: 12px;
+	text-align: right;
+}
+.text_intro p{
+	font-size: 12px;
+	line-height: 150%;
+	text-indent: 2em;
+}
+
+/**主体多列图*/
+
+.pic_column{
+	display: flex;
+	display: -webkit-flex;
+	width: 1000px;
+	margin: 10px auto 10px auto;
+}
+[class^="column"]{
+	width: 320px;
+	background-color: white;
+	margin-right:  10px;
+	flex: 1;
+	text-align: center;
+	
+}
+.pic_column img{
+	width: 300px;
+	height: 180px;
+	margin-top: 10px;
+}
+.pic_column p{
+	font:12px black;
+	line-height: 170%;
+	padding: 5px 30px 25px 30px;
+}
+
+
+
+.self_intro{
+	width: 100%;
+	margin-top: 100px;
+	background-color: white;
+}
+
+/*图片居中放置及圆角化*/
+.self_intro_img{
+	width: 100%;
+	text-align: center;
+}
+.self_intro_img img{
+	height: 160px;
+	width: 160px;
+	border-radius: 80px 80px;
+	border:#e2e2e2 5px solid;
+	margin-top: -50px;
+
+}
+/*文字介绍部分*/
+.self_intro_text{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	margin-top: 50px;
+}
+.self_intro_text h2{
+	font: 20px 'Century Gothic';
+	margin-bottom: 40px;
+
+}
+.self_intro_text p{
+	text-indent: 2em;
+	font: 14px ;
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+
+
+
+/**************************gallery页面***********************/
+#gallery_main{
+	width: 980px;
+	margin: 0 auto 20px;
+	font-family: sans-serif;
+}
+
+/*瀑布流布局*/
+#gallery_content{
+	width: 710px;
+	margin-top: 20px;
+	background-color: white;
+	float: left;
+}
+/**大盒子*/
+.panel{
+	width: 670px;
+	margin: 20px;
+	/*下面代码是兼容各个浏览器的，并实现了四列，没两列之间间距为10px，*/
+    -moz-column-count:3;
+    -moz-column-gap:10px;
+    -moz-column-rule:0px solid #ff0000;   /*火狐浏览器*/
+    -webkit-column-count:3;
+    -webkit-column-gap:10px;
+    -webkit-column-rule:0px solid #ff0000;   /*Google chrome*/ 
+    -o-column-count:3;
+    -o-column-gap:10px;
+    -o-column-rule:0px solid #ff0000;   /*Opera浏览器*/
+}
+
+/*小盒子*/
+.gallery_1 img{
+	width: 330px;
+	height: 150px;
+
+}
+.gallery_2 img{
+	width: 160px;
+	height: 100px;
+}
+
+.gallery_1,.gallery_2{
+	margin-bottom: 10px;
+}
+
+.gallery_1{
+	width: 330px;
+	background-color: #FF7F50;
+}
+
+.gallery_2{
+	width: 160px;
+	background-color: #FF7F50;
+}
+
+
+/**搜索和榜单部分*/
+#content_right{
+	width: 260px;
+	height: 400px;
+	margin-top: 60px;
+	float: right;
+}
+
+#seatch{
+	width: 100%;
+	height: 70px;
+	background-color: white;
+}
+
+#list{
+	width: 100%;
+	height: 240px;
+	margin-top: 10px;
+	background-color: white;
+}
+
+
+
+/*******************************about页面************************/
+#about_main{
+	width: 980px;
+	margin: 0 auto 50px;
+	font-family: sans-serif;
+
+	
+}
+
+/*个人头像部分*/
+#head_img{
+	width: 980px;
+	background-color: white;
+	margin-top: 80px;
+	text-align: center;
+	height: 120px;
+}
+#head_img img{
+	height: 160px;
+	width: 160px;
+	border-radius: 80px 80px;
+	margin-top: -50px;
+	border:5px solid #e2e2e2;
+}
+
+/*自我介绍部分*/
+.content_intro{
+	width: 980px;
+	font-family: sans-serif;
+	display: flex;
+	display: -webkit-flex;
+
+}
+[class^="intro"]{
+	flex:1;
+	background-color: white;
+}
+.intro_left{
+	margin-right: 5px;
+	text-align: right;
+}
+.intro_left p{
+	margin-top: 30px;
+	margin-right: 60px;
+	font-size: 20px;
+}
+.intro_right p{
+	text-indent: 2em;
+	margin: 30px auto 30px 45px;
+	font-size: 14px;
+}
+
+
+/*联系方式部分*/
+#about_main .intro_img{
+	width: 980px;
+	background-color: white;
+	text-align: center;
+}
+.intro_img img{
+	width: 100px;
+	height: 100px;
+	border-radius: 52px 52px;
+	border:3px solid #e2e2e2;
+}
+.center{
+	width:  180px;
+	height: 20px;
+	border-radius: 5px / 5px;
+}
+
+
+
+.edu1{
+	width: 980px;
+	position: relative;
+}
+.edu_content1{
+	width: 980px;
+	font-family: sans-serif;
+	display: flex;
+	display: -webkit-flex;
+}
+.center{
+	width: 60px;
+	height: 1.5em;
+	line-height: 1.5em;
+	text-align: center;
+	background-color: white;
+	border:4px solid #e2e2e2;
+	border-radius: 10px 10px;
+	position: absolute;
+	left: 455px;
+	top:25px;
+}
+
+
+
+
+
+/*footer部分*/
+footer{
+	width: 100%;
+	height: 200px;
+	background-color: black;	
+	color: white;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.foot_nav1{
+	width: 100%;
+	height: 50px;	
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.foot_nav1 ul li{
+	float: left;
+	margin-right:  10px;
+}
+	
+.footer_column{
+	display: flex;
+	display: -webkit-flex;
+	margin: 10px auto;
+
+}
+.footer_column1{
+	flex:1;
+	text-align: center;
+	margin: 10px;
+}
+
+/*未完全完成*/
