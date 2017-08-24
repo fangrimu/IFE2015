@@ -1,0 +1,315 @@
+h1{color:blue;}
+h2{font-size: 14px}
+
+p:first-child{
+	color: yellow;
+	font-size: 12px;
+	background-color: black;
+	text-indent: 2em; /*第一行缩进*/
+	border:solid  2px gray;
+	text-align: center;/*块级元素内文本对齐方式*/
+	text-transform: capitalize;/*对文字大小写转换*/
+	text-decoration: underline;
+}
+p:nth-child(2){
+	color: red;
+	font-size: 1em;
+	text-indent: -2em; /*第一行缩进*/
+	text-align: right ;/*块级元素内文本对齐方式*/
+	text-transform: uppercase;/*对文字大小写转换*/
+	text-decoration: line-through;
+	word-spacing: 0.5em; /**字间隔*/
+}
+p:nth-child(3){
+
+	
+	white-space: pre;/**保留文本中的空格和换行符，不允许自动换行*/
+	border: 2px solid gray;
+
+}
+p:nth-child(4){
+	
+		white-space: nowrap;/**去掉空白格和换行符，防止换行，除非使用 ，br*/
+border: 2px solid gray;
+
+}
+
+p:nth-child(5){
+	
+		white-space: pre-line;/**合并空白格，保留换行符，允许自动换行*/
+border: 2px solid gray;
+
+}
+p:nth-child(6){
+	
+		white-space: pre-wrap;/**保留文本中的空格和回车，允许自自动换行*/
+border: 2px solid gray;
+
+}
+p:nth-child(7){
+	
+	line-height: 10px;/*行高：每一行文字的高度，包括了字体大小和行间距*/
+	font-size: 18px;
+
+ 
+border: 4px solid gray;
+
+}
+@font-face{
+	font-family:qing;
+src:local('qing'),url('qing.ttf') format('truetype') ;
+}
+p:nth-child(8){
+	
+	line-height:20px;/*行高：每一行文字的高度，包括了字体大小和行间距*/
+	font-size:18px;
+font-family:qing;/*谷歌和百度浏览器不支持！！！！！！！！！！！！！！！待更多研究*/
+/*font-style: italic;*/
+ 
+border: 2px solid gray;
+
+}
+
+img{border: red 2px solid}
+ 
+
+ /*DIV居中的方法*/
+ div#middle1{
+ 	background-color: red;
+ 	width: 960px;
+ 	text-align: center;
+ 	margin: 10px auto;
+ }
+ div#middle2{
+ 		position: relative;
+ 	margin-bottom: 10px;
+ }
+ div#middle22{
+ 	text-align: center;
+ 	background-color: red;
+ 	width: 960px;
+ 	position: absolute;
+ 	top:0;
+ 	left: 1em;
+ 	right: 1em;
+ 	margin: 0 auto; /*将外边距为auto的水平剧中*/
+
+ }
+
+ div#middle3{
+ 		text-align: center;
+ 		margin: 10px;
+ }
+ div#middle33{
+ 	background-color: red;
+ 	width: 960px;
+ 	display: inline-block;
+
+ }
+
+ /*圆角矩形*/
+ div#raduis{
+ 	background-color: gray;
+ 	height: 200px;
+ 	margin: 50px;
+ 	border-radius: 20px;
+ }
+
+ /*弹性布局*/
+ div.boxholder{
+ 	display: flex;
+ 	display: -webkit-flex;
+ 	height: 300px;
+ 	width: 330px;
+ 	background-color: gray;
+ 	justify-content: space-between;
+ }
+ div[class^='flex']{
+ 	border: 2px solid black;
+ 	width: 100px;
+ 	height: 100px;
+ 	
+ }
+ div[class^="column"]{
+ 	display: flex;
+ 	display: -webkit-flex;
+ 	flex-direction: column;
+ }
+
+div.Grid{
+	display: flex;
+	display: -webkit-flex;
+	width: auto;
+	margin: 10px;
+	
+	
+}
+div[class^="GridCell"]{
+	flex: 1;
+	background-color: gray;	
+	margin: 5px;
+	text-align: center;
+
+}
+div.GridCell2{
+	flex: 2;
+}
+
+div.GridPercent{
+	margin: 10px;
+	border: 2px solid;	
+}
+
+div.GridCell.full{
+	flex:0 0 100%;
+}
+div.GridCell.p5{
+	flex:0 0 50%;
+}
+div.GridCell.p3{
+	flex:0 0 33.333%;
+}
+
+div.HolyGrail{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	height: 300px;
+}
+div.header,div.footer{
+	background-color: black;
+	color: white;
+	text-align: center;
+	flex:1;
+}
+
+div.HolyGrail-body{
+	flex: 4;
+	display: flex;
+	display: -webkit-flex;
+}
+
+[class^="HolyGrailBody"]{
+	flex: 1;
+}
+.HolyGrailBody-nav{
+	order: -1;
+	background-color: #AEEEEE;
+	color: black;
+}
+
+.HolyGrailBody-ads{
+	background-color: #CD3700;
+	color: black;
+}
+.HolyGrailBody-content{
+	flex: 0 0 70%;
+}
+/*.HolyGrailBody-nav,.HolyGrailBody-ads{
+	flex: 0 0 70px;
+}*/
+ 
+ /*两列布局*/
+ div.box{
+ 	display: flex;
+ 	display: -webkit-flex;
+ 	flex-direction: column;
+ 	height: 100px;
+ 	margin: 10px;
+ }
+ div.bot{
+ 	flex: 1;
+ 	background-color: yellow;
+ }
+ div.top{
+ 	flex: 1;
+ 	display: flex;
+ 	display: -webkit-flex;
+ }
+ div.A{
+ 	width: 50px;
+ 	height: 50px;
+ 	background-color: red;
+ }
+ div.B{
+ 	flex: 1;
+ 	background-color: blue;
+ }
+
+div.box1{
+	margin: 10px;
+}
+div.A1{
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-color: red;
+}
+div.B1{
+	height: 50px;
+	
+	margin-left: 50px;
+	background-color: blue;
+}
+div.C1{
+	clear: left;
+	width: 100%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+}
+
+
+
+/*三列布局*/
+ div.columnbox{
+ 	margin-top: 100px;
+ 	display: flex;
+ 	display: -webkit-flex;
+ 	flex-direction: row;
+ 	
+ }
+ .CA,.CB,.CC{
+ 	background-color: gray;
+ 	margin: 2px;
+ 	width: 70px;
+ }
+ 
+ .CB{
+ 	flex: 1;
+ }
+
+ div.columnbox1{
+ 	margin-top: 10px;
+ }
+ .CA1,.CB1,.CC1{
+ 	background-color: gray;
+ 	/*margin: 2px;*/
+}
+ 
+ .CA1{
+ 	float: left;
+ 	width: 70px;
+ }
+ .CB1{
+ 	margin:0 70px;
+
+ }
+ .CC1{
+ 	float: right;
+ 	width: 70px;
+ }
+
+
+ div.redbox{
+ 	display: flex;
+ 	display: -webkit-flex;
+ 	background-color: red;
+ 	flex-wrap: wrap;
+ }
+ div.blue{
+ 	background-color: blue;
+ 	width: 400px;
+ 	height: 50px;
+ 	margin: 2px;
+ }
